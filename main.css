@@ -1,0 +1,215 @@
+@import "./styles/reset.css";
+@import "./styles/grid.css";
+@import "./styles/select.css";
+
+/* Body */
+body {
+    font-family: 'Vazir', sans-serif;
+    background-color: #1d1d1d;
+    font-size: 16px;
+    padding: 1rem;
+    direction: rtl;
+    height: 100vh;
+}
+body.ltr {
+    direction: ltr;
+}
+
+/* Layout */
+.section {
+    position: relative;
+    font-size: 1rem;
+}
+.section__header {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.section__header-title {
+    color: #FFFFFF; 
+}
+
+/* Select Box */
+.select {
+    font-size: 1rem;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.select__field {
+    min-width: 150px;
+}
+.select .btn {
+    margin-left: 0.5rem;
+}
+
+/* Button Style */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    line-height: 1;
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    min-width: 100px;
+    height: 50px;
+}
+.btn--sm {
+    height: 40px;
+}
+.btn--primary {
+    background-color: #00baba;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.btn--primary-outline {
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border-color: #00baba;
+    color: #00baba;
+    font-weight: bold;
+}
+
+/* Initial Form */
+.token-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 75vh;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.token-form input[type="text"] {
+    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+    padding: 0.75rem;
+}
+.token-form button {
+    margin-right: 1rem;
+}
+
+/* Server Card */
+
+.server {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+.server__img {
+    font-size: 0;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+.server__title {
+    position: relative;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.server__status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1rem;
+    color: #FFFFFF;
+    width: 100%;
+}
+.server__status:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+
+}
+.server__status > span:first-child {
+    opacity: 0.5;
+}
+
+/* Loading */
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 75vh;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.loading--hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.loading__wrapper {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading__wrapper > span {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 14px;
+    background: #00baba;
+    animation: loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.loading__wrapper > span:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.loading__wrapper > span:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.loading__wrapper > span:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes loading {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
