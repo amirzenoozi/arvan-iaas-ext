@@ -1,9 +1,10 @@
 # Arvan Cloud IaaS Ext.
-A Simple Extension For Chrome New Tab With ArvanCloud Public API.
+A Simple Extension For Chrome and Firefox New Tab With ArvanCloud Public API.
 
 - [x] Check Status
 - [ ] Actions
 - [ ] Search
 
 ## WebStore Link
-If You Want To Install This Ext Check This [Page](https://chrome.google.com/webstore/detail/arvan-cloud-iaas/epaajpjphinkdlmmkgdbclkgmmhppmmg)
+Chrome WebStor [Page](https://chrome.google.com/webstore/detail/arvan-cloud-iaas/epaajpjphinkdlmmkgdbclkgmmhppmmg)
+FireFox Add-Ons [Page](https://addons.mozilla.org/en-US/firefox/addon/arvan-cloud-iaas/)
