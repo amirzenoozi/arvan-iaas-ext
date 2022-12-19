@@ -4,7 +4,7 @@ const ReloadBtn = document.getElementById('reload');
 const Loading = document.getElementById('loading');
 let NiceSelectElem = undefined;
 
-const BASE_URL = 'https://napi.arvancloud.com/';
+const BASE_URL = 'https://napi.arvancloud.ir/';
 let lastRegion = '';
 let API_KEY = '';
 let isLoading = true;
